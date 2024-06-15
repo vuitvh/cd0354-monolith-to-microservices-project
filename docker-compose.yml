@@ -11,28 +11,28 @@ services:
   backend-user:
     image: vtran1005/udagram-api-user:main
     environment:
-      POSTGRES_USERNAME: vuitvh
-      POSTGRES_PASSWORD:
-      POSTGRES_DB: udagram_db
-      POSTGRES_HOST: udagram-app-db.cqelv38dkdbp.us-east-1.rds.amazonaws.com
-      AWS_REGION: us-east-1
-      AWS_PROFILE: default
-      AWS_BUCKET: udagram-app-bucket
-      JWT_SECRET: testing
+      POSTGRES_USERNAME: $POSTGRES_USERNAME
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+      POSTGRES_DB: $POSTGRES_DB
+      POSTGRES_HOST: $POSTGRES_HOST
+      AWS_REGION: $AWS_REGION
+      AWS_PROFILE: $AWS_PROFILE
+      AWS_BUCKET: $AWS_BUCKET
+      JWT_SECRET: $JWT_SECRET
       URL: 'http://localhost:8100'
   backend-feed:
     image: vtran1005/udagram-api-feed:main
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
-      POSTGRES_USERNAME: vuitvh
-      POSTGRES_PASSWORD:
-      POSTGRES_DB: udagram_db
-      POSTGRES_HOST: udagram-app-db.cqelv38dkdbp.us-east-1.rds.amazonaws.com
-      AWS_REGION: us-east-1
-      AWS_PROFILE: default
-      AWS_BUCKET: udagram-app-bucket
-      JWT_SECRET: testing
+      POSTGRES_USERNAME: $POSTGRES_USERNAME
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+      POSTGRES_DB: $POSTGRES_DB
+      POSTGRES_HOST: $POSTGRES_HOST
+      AWS_REGION: $AWS_REGION
+      AWS_PROFILE: $AWS_PROFILE
+      AWS_BUCKET: $AWS_BUCKET
+      JWT_SECRET: $JWT_SECRET
       URL: 'http://localhost:8100'
   frontend:
     image: vtran1005/udagram-frontend:main
