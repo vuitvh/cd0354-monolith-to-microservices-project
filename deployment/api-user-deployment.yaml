@@ -19,12 +19,12 @@ spec:
           image: vtran1005/udagram-api-user:main
           imagePullPolicy: Always
           resources:
-            requests:
-              memory: '512Mi'
-              cpu: '250m'
             limits:
-              memory: '1024Mi'
-              cpu: '500m'
+              cpu: "500m"
+              memory: "300Mi"
+            requests:
+              cpu: "100m"
+              memory: "200Mi"
           env:
             - name: JWT_SECRET
               valueFrom:
