@@ -7,5 +7,5 @@ COPY package*.json ./
 RUN npm i
 ## Bundle app source
 COPY . .
-EXPOSE 8080
+EXPOSE 8082
 CMD [ "npm", "run", "dev" ]

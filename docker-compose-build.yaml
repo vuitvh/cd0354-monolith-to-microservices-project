@@ -4,11 +4,11 @@ services:
     build:
       context: ./udagram-reverseproxy
     image: vtran1005/reverseproxy:v1
-  backend_user:
+  udagram-api-user:
     build:
       context: ./udagram-api-user
     image: vtran1005/udagram-api-user:main
-  backend_feed:
+  udagram-api-feed:
     build:
       context: ./udagram-api-feed
     image: vtran1005/udagram-api-feed:main
